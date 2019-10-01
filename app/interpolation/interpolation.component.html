@@ -1,0 +1,19 @@
+<p>interpolation component</p>
+<h3>here is the use of interpolation: {{name}}</h3>
+
+<button (click)="onClick($event)">Greet</button>
+{{greeting}}
+
+<h3>{{"a mix with JS methods(length): " + name.length}}</h3>
+<!-- based off boolean class changes CSS -->
+<p [class.text-danger]="hasError" >method example call: {{greetUser()}}</p>
+<input #myInput type="text" value="ID">
+<button (click)="logMessage(myInput.value)">Log</button>
+
+<p [class.text-danger]="hasError" >method example call: {{greetUser()}}</p>
+
+<!-- multiple conditional classes added from the .ts  -->
+<h2 [ngClass]="messageClasses">Multiple conditions on interpolation {{name}}</h2>
+
+<!-- cannot give assignments through bindings -->
+<!--  -->

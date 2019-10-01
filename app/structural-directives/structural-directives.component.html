@@ -1,0 +1,33 @@
+<p>structural-directives works!</p>
+<button (click)="toggleDisplay()">Toggle visability</button>
+<!-- ngIf -->
+<h1 *ngIf="displayName; else elseBlock">
+    now you see me
+</h1>
+<ng-template #elseBlock>
+    <h1>
+        Now its hidden
+    </h1>
+</ng-template>
+<hr>
+<app-two-way>
+
+</app-two-way>
+<!-- ngSwitch -->
+<div [ngSwitch]= "color">
+    <div *ngSwitchCase = "'red'">
+        red selected
+    </div>
+    <div *ngSwitchCase = "'blue'">
+        blue selected
+    </div>
+    <div *ngSwitchCase = "'green'">
+        green selected
+    </div>
+    <div *ngSwitchDefault>select again</div>
+</div>
+<!-- ngFor  -->
+
+<div *ngFor = "let iterationOfColor of colors; index as i" >
+    <h3>{{i}} : {{iterationOfColor}}</h3>
+</div>
